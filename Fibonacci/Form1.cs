@@ -49,6 +49,9 @@ namespace Fibonacci
 
             }
             textBox1.Text = zlicz.ToString();
+            double e = (1f / 89) - zlicz;
+            textBox2.Text = e.ToString();
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
