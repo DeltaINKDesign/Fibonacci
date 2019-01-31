@@ -32,8 +32,8 @@ namespace Fibonacci
             double all = 0;
             for (int i = 1; i < range; i++)
             {
-                int k = fibonacci(i);
-                listBox1.Items.Add(k.ToString());
+                int a = fibonacci(i);
+                listBox1.Items.Add(a.ToString());
                 listBox2.Items.Add(zmienna);
                 zmienna = "0,";
                 for(int j = 1; j < i; j++)
@@ -41,7 +41,7 @@ namespace Fibonacci
                     zmienna += "0";
 
                 }
-                zmienna += k.ToString();
+                zmienna += a.ToString();
                 if (i > 1)
                 {
                     all += Convert.ToDouble(zmienna);
@@ -82,6 +82,11 @@ namespace Fibonacci
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
