@@ -15,41 +15,41 @@ namespace Fibonacci
         public Form1()
         {
             InitializeComponent();
-            licz();
+            algorm();
         }
 
-        int fib(int ile)
+        int fibonacci(int ile)
         {
             if (ile <= 1) return ile;
-            else return fib(ile - 2) + fib(ile - 1);
+            else return fibonacci(ile - 2) + fibonacci(ile - 1);
         }
 
-        void licz()
+        void algorm()
         {
             
             int range = hScrollBar1.Value;
-            string a = "0";
-            double zlicz = 0;
+            string zmienna = "0";
+            double all = 0;
             for (int i = 1; i < range; i++)
             {
-                int k = fib(i);
+                int k = fibonacci(i);
                 listBox1.Items.Add(k.ToString());
-                listBox2.Items.Add(a);
-                a = "0,";
+                listBox2.Items.Add(zmienna);
+                zmienna = "0,";
                 for(int j = 1; j < i; j++)
                 {
-                    a += "0";
+                    zmienna += "0";
 
                 }
-                a += k.ToString();
+                zmienna += k.ToString();
                 if (i > 1)
                 {
-                    zlicz += Convert.ToDouble(a);
+                    all += Convert.ToDouble(zmienna);
                 }
 
             }
-            textBox1.Text = zlicz.ToString();
-            double e = (1f / 89) - zlicz;
+            textBox1.Text = all.ToString();
+            double e = (1f / 89) - all;
             textBox2.Text = e.ToString();
             
         }
@@ -73,7 +73,7 @@ namespace Fibonacci
         {
             listBox1.Items.Clear();
             listBox2.Items.Clear();
-            licz();
+            algorm();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
